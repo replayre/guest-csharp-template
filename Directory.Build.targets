@@ -1,0 +1,33 @@
+<Project>
+    <PropertyGroup>
+        <DistDir>$(MSBuildThisFileDirectory)dist\</DistDir>
+    </PropertyGroup>
+
+    <Target Name="CopyWasiArtifacts" AfterTargets="Build">
+        <MakeDir Directories="$(DistDir)" />
+
+        <!-- Copy config -->
+        <Copy
+            SourceFiles="$(MSBuildThisFileDirectory)data\config.toml"
+            DestinationFolder="$(DistDir)"
+            SkipUnchangedFiles="true"
+            Condition="Exists('$(MSBuildThisFileDirectory)data\config.toml')"
+        />
+
+        <!-- Copy cl wasm -->
+        <Copy
+            SourceFiles="$(MSBuildThisFileDirectory)cl\bin\$(Configuration)\net10.0\wasi-wasm\native\cl.wasm"
+            DestinationFolder="$(DistDir)"
+            SkipUnchangedFiles="false"
+            Condition="Exists('$(MSBuildThisFileDirectory)cl\bin\$(Configuration)\net10.0\wasi-wasm\native\cl.wasm')"
+        />
+
+        <!-- Copy sv wasm -->
+        <Copy
+            SourceFiles="$(MSBuildThisFileDirectory)sv\bin\$(Configuration)\net10.0\wasi-wasm\native\sv.wasm"
+            DestinationFolder="$(DistDir)"
+            SkipUnchangedFiles="false"
+            Condition="Exists('$(MSBuildThisFileDirectory)sv\bin\$(Configuration)\net10.0\wasi-wasm\native\sv.wasm')"
+        />
+    </Target>
+</Project>

@@ -1,0 +1,13 @@
+[General]
+description = "guest-csharp-template"
+author = "replay.re"
+version = "0.1"
+
+[Scripting]
+client_blob = "cl.wasm"
+server_blob = "sv.wasm"
+
+[ReUi]
+
+[Meta]
+config_version = "alpha_playtest"

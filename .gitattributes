@@ -1,0 +1,13 @@
+* text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.gz binary
+*.zip binary
+*.7z binary
+*.ico binary
+*.rc binary
+*.exe binary
+*.dll binary
+*.lib binary

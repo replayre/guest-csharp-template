@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <RuntimeIdentifier>wasi-wasm</RuntimeIdentifier>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PublishTrimmed>true</PublishTrimmed>
+        <SelfContained>true</SelfContained>
+        <MSBuildEnableWorkloadResolver>false</MSBuildEnableWorkloadResolver>
+        <InvariantGlobalization>true</InvariantGlobalization>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+        <RestoreForceEvaluate>true</RestoreForceEvaluate>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="replay.blackice.server" Version="*" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../sh/sh.csproj" />
+    </ItemGroup>
+</Project>

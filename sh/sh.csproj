@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RuntimeIdentifier>wasi-wasm</RuntimeIdentifier>
+        <UseAppHost>false</UseAppHost>
+        <PublishTrimmed>true</PublishTrimmed>
+        <InvariantGlobalization>true</InvariantGlobalization>
+        <SelfContained>true</SelfContained>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <RestoreForceEvaluate>true</RestoreForceEvaluate>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="replay.blackice.shared" Version="*" />
+        <PackageReference Include="Serde" Version="0.10.2" />
+    </ItemGroup>
+</Project>
